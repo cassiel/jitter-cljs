@@ -2,7 +2,7 @@
 	"name" : "jitter-cljs",
 	"version" : 1,
 	"creationdate" : 3536602299,
-	"modificationdate" : 3536602333,
+	"modificationdate" : 3536654427,
 	"viewrect" : [ 25.0, 70.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -14,6 +14,11 @@
 				"kind" : "patcher",
 				"local" : 1,
 				"toplevel" : 1
+			}
+,
+			"manual-text.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
 			}
 
 		}
