@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 538.0, 111.0, 369.0, 403.0 ],
+		"rect" : [ 170.0, 355.0, 365.0, 300.0 ],
 		"bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
 		"editing_bgcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 		"bglocked" : 0,
@@ -20,7 +20,7 @@
 		"gridonopen" : 2,
 		"gridsize" : [ 15.0, 5.0 ],
 		"gridsnaponopen" : 2,
-		"objectsnaponopen" : 1,
+		"objectsnaponopen" : 0,
 		"statusbarvisible" : 2,
 		"toolbarvisible" : 1,
 		"lefttoolbarpinned" : 0,
@@ -45,21 +45,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 195.0, 140.0, 24.0, 24.0 ],
+					"patching_rect" : [ 90.0, 30.0, 24.0, 24.0 ],
 					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-4",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.0, 140.0, 155.0, 20.0 ],
-					"style" : "",
-					"text" : "compile _main-dev.js"
 				}
 
 			}
@@ -70,14 +57,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 240.0, 190.0, 25.0, 20.0 ],
+					"patching_rect" : [ 90.0, 95.0, 135.0, 20.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "_main-dev.js",
+						"filename" : "manual-js.js",
 						"parameter_enable" : 0
 					}
 ,
 					"style" : "",
-					"text" : "js"
+					"text" : "js manual-js.js"
 				}
 
 			}
@@ -91,18 +78,9 @@
 				}
 
 			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-4", 0 ]
-				}
-
-			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "_main-dev.js",
+				"name" : "manual-js.js",
 				"bootpath" : "~/GITHUB/cassiel/jitter-cljs/projects/jitter-cljs/code",
 				"type" : "TEXT",
 				"implicit" : 1

@@ -2,8 +2,8 @@
 	"name" : "jitter-cljs",
 	"version" : 1,
 	"creationdate" : 3536602299,
-	"modificationdate" : 3536654427,
-	"viewrect" : [ 25.0, 70.0, 300.0, 500.0 ],
+	"modificationdate" : 3536675691,
+	"viewrect" : [ 25.0, 70.0, 525.0, 538.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
 	"showdependencies" : 1,
@@ -20,6 +20,29 @@
 				"kind" : "patcher",
 				"local" : 1
 			}
+,
+			"manual-js.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+
+		}
+,
+		"code" : 		{
+			"manual-js.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"_main-dev.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
+			"_main.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
 
 		}
 
@@ -33,7 +56,7 @@
 
 	}
 ,
-	"detailsvisible" : 0,
+	"detailsvisible" : 1,
 	"amxdtype" : 1633771873,
 	"readonly" : 0,
 	"devpathtype" : 0,
