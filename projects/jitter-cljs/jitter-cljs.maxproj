@@ -2,7 +2,7 @@
 	"name" : "jitter-cljs",
 	"version" : 1,
 	"creationdate" : 3536602299,
-	"modificationdate" : 3536675691,
+	"modificationdate" : 3536689932,
 	"viewrect" : [ 25.0, 70.0, 525.0, 538.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -12,8 +12,7 @@
 		"patchers" : 		{
 			"jitter-cljs.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1,
-				"toplevel" : 1
+				"local" : 1
 			}
 ,
 			"manual-text.maxpat" : 			{
@@ -25,22 +24,40 @@
 				"kind" : "patcher",
 				"local" : 1
 			}
+,
+			"trouble.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
 
 		}
 ,
 		"code" : 		{
+			"_main-dev.js" : 			{
+				"kind" : "javascript",
+				"local" : 1
+			}
+,
 			"manual-js.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
 ,
-			"_main-dev.js" : 			{
+			"trouble.js" : 			{
 				"kind" : "javascript",
 				"local" : 1
 			}
 ,
 			"_main.js" : 			{
 				"kind" : "javascript",
+				"local" : 1
+			}
+
+		}
+,
+		"other" : 		{
+			"manual-js.coffee" : 			{
+				"kind" : "file",
 				"local" : 1
 			}
 
