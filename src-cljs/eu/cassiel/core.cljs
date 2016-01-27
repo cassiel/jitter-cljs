@@ -8,7 +8,7 @@
                   :auto (tw/locate auto time)
                   :time (inc time))))
   (let [a @(.-state me)]
-    (js/post (str (:auto a) "\n"))
+    ;;(js/post (str (:auto a) "\n"))
     (.outlet me 0 "rotate_it" (:time a) (tw/sample (:auto a) :X)))
   )
 

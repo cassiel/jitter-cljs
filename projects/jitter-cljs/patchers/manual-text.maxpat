@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 446.0, 89.0, 474.0, 609.0 ],
+		"rect" : [ 118.0, 1050.0, 748.0, 609.0 ],
 		"bgcolor" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
 		"editing_bgcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 		"bglocked" : 0,
@@ -84,9 +84,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 435.0, 530.0, 140.0, 20.0 ],
+					"patching_rect" : [ 435.0, 530.0, 126.0, 20.0 ],
 					"style" : "",
-					"text" : "jit.gl.sketch NODE"
+					"text" : "jit.gl.sketch NX"
 				}
 
 			}
@@ -110,9 +110,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_gl_texture", "", "" ],
-					"patching_rect" : [ 330.0, 405.0, 198.0, 20.0 ],
+					"patching_rect" : [ 330.0, 405.0, 183.0, 20.0 ],
 					"style" : "",
-					"text" : "jit.gl.node WIN @name NODE"
+					"text" : "jit.gl.node WIN @name NX"
 				}
 
 			}
@@ -223,14 +223,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-2",
-					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 315.0, 280.0, 349.0, 32.0 ],
+					"patching_rect" : [ 315.0, 280.0, 392.0, 20.0 ],
 					"style" : "",
-					"text" : "jit.gl.text3d NODE @color 1 1 1 1 @fontsize 20 @align 1"
+					"text" : "jit.gl.text3d NX @color 1 1 1 1 @fontsize 20 @align 1"
 				}
 
 			}
@@ -472,9 +471,9 @@
 		"styles" : [ 			{
 				"name" : "cassiel",
 				"default" : 				{
-					"selectioncolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ],
 					"patchlinecolor" : [ 0.960784, 0.827451, 0.156863, 0.9 ],
 					"fontname" : [ "Courier" ],
+					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"elementcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -486,8 +485,8 @@
 						"autogradient" : 0
 					}
 ,
-					"bgcolor" : [ 0.095481, 0.100396, 0.100293, 1.0 ],
-					"color" : [ 1.0, 1.0, 1.0, 1.0 ]
+					"selectioncolor" : [ 0.784314, 0.145098, 0.023529, 1.0 ],
+					"bgcolor" : [ 0.095481, 0.100396, 0.100293, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -496,8 +495,8 @@
 , 			{
 				"name" : "cassiel-attrui",
 				"default" : 				{
-					"selectioncolor" : [ 0.960784, 0.827451, 0.156863, 1.0 ],
 					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"selectioncolor" : [ 0.960784, 0.827451, 0.156863, 1.0 ],
 					"bgcolor" : [ 0.317141, 0.341132, 0.336206, 1.0 ]
 				}
 ,
