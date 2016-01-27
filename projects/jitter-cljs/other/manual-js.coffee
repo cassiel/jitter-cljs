@@ -20,4 +20,8 @@ this.bang = () ->
         this.myRender.drawclients()
         this.myRender.swap()
 
+this.die = () ->
+        this.myTexts = []
+        gc()
+
 post new Date + "\n"

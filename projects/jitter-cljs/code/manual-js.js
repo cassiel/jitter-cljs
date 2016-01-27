@@ -33,6 +33,11 @@
     return this.myRender.swap();
   };
 
+  this.die = function() {
+    this.myTexts = [];
+    return gc();
+  };
+
   post(new Date + "\n");
 
 }).call(this);

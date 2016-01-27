@@ -33,7 +33,10 @@
     (.swap r)))
 
 (defn closebang [me]
-  ;;(set! (.-CONTEXT me) nil)
+  (set! (.-window me) nil)
+  (set! (.-render me) nil)
+  (set! (.-text me) nil)
+  (set! (.-node me) nil)
   (js/gc)
   (js/post "closebang!\n"))
 
