@@ -1,47 +1,28 @@
-(ns eu.cassiel.core)
-
-(this-as me
-         (set! (.-window me)
-               (js/JitterObject. "jit.window" "WINDOW"))
-
-         (set! (.-render me)
-               (js/JitterObject. "jit.gl.render" "WINDOW"))
-
-         (let [n (js/JitterObject. "jit.gl.node" "WINDOW")]
-           (set! (.-name n) "NODE2")
-           (set! (.-node me) n))
-
-         (let [t  (js/JitterObject. "jit.gl.text" "NODE2")]
-           (set! (.-color t) (array 1 1 1 1))
-           (set! (.-fontsize t) 20)
-           (set! (.-depth t) 0.1)
-           (set! (.-rotate t) (array 20.0 0.0 0.0 1.0))
-           (set! (.-align t) 1)
-           (set! (.-material t) "mtl")
-
-           (doto t
-             (.font "Courier")
-             (.text "Hello"))
-
-           (set! (.-text me) t)
-           ))
+(ns eu.cassiel.core
+  (:require [eu.cassiel.twizzle :as tw]))
 
 (defn bang [me]
-  (let [r (.-render me)]
-    (.erase r)
-    (.drawclients r)
-    (.swap r)))
+  (swap! (.-state me)
+         (fn [{:keys [auto time] :as s}]
+           (assoc s
+                  :auto (tw/locate auto time)
+                  :time (inc time))))
+  (let [a @(.-state me)]
+    (js/post (str (:auto a) "\n"))
+    (.outlet me 0 "rotate_it" (:time a) (tw/sample (:auto a) :X)))
+  )
 
-(defn closebang [me]
-  (set! (.-window me) nil)
-  (set! (.-render me) nil)
-  (set! (.-text me) nil)
-  (set! (.-node me) nil)
-  (js/gc)
-  (js/post "closebang!\n"))
+(defn seek
+  "Seek to a rotation"
+  [me msec degrees]
+  (swap! (.-state me)
+         update :auto tw/automate-in :X 0 msec degrees))
 
 (this-as me
-         (set! (.-bang me) #(bang me))
-         (set! (.-closebang me) #(closebang me))
+         (set! (.-state me) (atom {:auto (tw/initial :init {:X 0.0})
+                                   :time 0}))
+         (set! (.-seek me) (partial seek me))
+         (set! (.-bang me) (partial bang me))
+
          (set! (.-autowatch me) 1)
          (js/post (str "eu.cassiel.core " (js/Date) "\n")))
